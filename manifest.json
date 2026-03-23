@@ -1,0 +1,16 @@
+{
+  "name": "Saveurs & Économies",
+  "short_name": "SaveursEco",
+  "start_url": "index.html",
+  "display": "standalone",
+  "scope": "./",
+  "background_color": "#ffffff",
+  "theme_color": "#10b981",
+  "icons": [
+    {
+      "src": "web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

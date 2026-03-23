@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votre Pack - Saveurs & Économies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="robots" content="noindex">
+    <style>
+        .copy-badge { display: none; }
+        .copied .copy-badge { display: inline; }
+        .copied .copy-icon { display: none; }
+    </style>
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="SaveursEco">
+
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans pb-20">
+
+    <nav class="bg-white border-b border-slate-200 py-4 mb-8 shadow-sm sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 flex justify-between items-center">
+            <span class="font-bold text-emerald-600 text-lg">🥗 Saveurs & Économies</span>
+            <span class="text-xs bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full font-bold uppercase tracking-wider">Accès Client</span>
+        </div>
+    </nav>
+
+    <main class="max-w-3xl mx-auto px-4">
+        <header class="text-center mb-12">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full mb-6">
+                <i class="fas fa-check text-2xl"></i>
+            </div>
+            <h1 class="text-3xl font-extrabold mb-4">Félicitations !</h1>
+            <p class="text-slate-600">Votre Pack est débloqué. Utilisez ces prompts pour transformer votre quotidien.</p>
+        </header>
+
+        <div class="space-y-8">
+
+            <section class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="p-5 bg-emerald-50 border-b border-emerald-100 flex justify-between items-center">
+                    <h2 class="font-bold text-emerald-800 text-sm">PROMPT #1 : LE MAGICIEN DU FRIGO</h2>
+                    <button onclick="copyPrompt('p1', this)" class="bg-white border border-emerald-200 px-4 py-2 rounded-lg text-emerald-600 hover:bg-emerald-600 hover:text-white transition-all text-sm font-bold flex items-center gap-2 shadow-sm">
+                        <i class="far fa-copy copy-icon"></i><span class="copy-badge">Copié !</span> Copier
+                    </button>
+                </div>
+                <div class="p-6">
+                    <p id="p1" class="text-slate-700 bg-slate-50 p-4 rounded-lg border border-dashed border-slate-300 italic">"Agis comme un chef de cuisine spécialisé en optimisation budgétaire. Ma mission est de cuisiner avec ce que j'ai déjà. Mes ingrédients : [INDIQUEZ VOS RESTES]. Nombre de personnes : [NOMBRE]. Propose-moi 3 idées de repas, donne une astuce de chef et propose des alternatives de substitution si un ingrédient manque."</p>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="p-5 bg-blue-50 border-b border-blue-100 flex justify-between items-center">
+                    <h2 class="font-bold text-blue-800 text-sm">PROMPT #2 : LE PLANIFICATEUR 40€</h2>
+                    <button onclick="copyPrompt('p2', this)" class="bg-white border border-blue-200 px-4 py-2 rounded-lg text-blue-600 hover:bg-blue-600 hover:text-white transition-all text-sm font-bold flex items-center gap-2 shadow-sm">
+                        <i class="far fa-copy copy-icon"></i><span class="copy-badge">Copié !</span> Copier
+                    </button>
+                </div>
+                <div class="p-6">
+                    <p id="p2" class="text-slate-700 bg-slate-50 p-4 rounded-lg border border-dashed border-slate-300 italic">"Agis comme un expert en économie domestique. J'ai un budget de [VOTRE BUDGET] pour nourrir [NOMBRE] personnes cette semaine (dîners). Génère un menu de 7 jours équilibré, assure-toi que les ingrédients se recoupent pour réduire les coûts et donne-moi la liste de courses classée par rayon."</p>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="p-5 bg-orange-50 border-b border-orange-100 flex justify-between items-center">
+                    <h2 class="font-bold text-orange-800 text-sm">PROMPT #3 : L'EXPERT LUNCHBOX</h2>
+                    <button onclick="copyPrompt('p3', this)" class="bg-white border border-orange-200 px-4 py-2 rounded-lg text-orange-600 hover:bg-orange-600 hover:text-white transition-all text-sm font-bold flex items-center gap-2 shadow-sm">
+                        <i class="far fa-copy copy-icon"></i><span class="copy-badge">Copié !</span> Copier
+                    </button>
+                </div>
+                <div class="p-6">
+                    <p id="p3" class="text-slate-700 bg-slate-50 p-4 rounded-lg border border-dashed border-slate-300 italic">"Agis comme un spécialiste du 'Meal Prep'. Mon plat du soir est : [VOTRE PLAT]. Propose-moi une variante créative pour transformer les restes en un déjeuner froid ou chaud pour demain midi. Ajoute un conseil de conservation et une petite sauce bonus."</p>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="p-5 bg-purple-50 border-b border-purple-100 flex justify-between items-center">
+                    <h2 class="font-bold text-purple-800 text-sm">PROMPT #4 : LE CRÉATEUR DE LISTE SMART</h2>
+                    <button onclick="copyPrompt('p4', this)" class="bg-white border border-purple-200 px-4 py-2 rounded-lg text-purple-600 hover:bg-purple-600 hover:text-white transition-all text-sm font-bold flex items-center gap-2 shadow-sm">
+                        <i class="far fa-copy copy-icon"></i><span class="copy-badge">Copié !</span> Copier
+                    </button>
+                </div>
+                <div class="p-6">
+                    <p id="p4" class="text-slate-700 bg-slate-50 p-4 rounded-lg border border-dashed border-slate-300 italic">"Rédige une liste de courses ultra-optimisée basée sur mes besoins : [VOS BESOINS]. Pour chaque article, indique si c'est un 'Essentiel' ou un 'Optionnel'. Alerte-moi sur les pièges marketing en magasin et estime le temps idéal en magasin."</p>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="p-5 bg-rose-50 border-b border-rose-100 flex justify-between items-center">
+                    <h2 class="font-bold text-rose-800 text-sm">PROMPT #5 : LE COACH GOÛTER À 1€</h2>
+                    <button onclick="copyPrompt('p5', this)" class="bg-white border border-rose-200 px-4 py-2 rounded-lg text-rose-600 hover:bg-rose-600 hover:text-white transition-all text-sm font-bold flex items-center gap-2 shadow-sm">
+                        <i class="far fa-copy copy-icon"></i><span class="copy-badge">Copié !</span> Copier
+                    </button>
+                </div>
+                <div class="p-6">
+                    <p id="p5" class="text-slate-700 bg-slate-50 p-4 rounded-lg border border-dashed border-slate-300 italic">"Propose 3 recettes de snacks maison qui coûtent moins de 1€ par portion. Ingrédients de base : [VOS PLACARDS]. Préparation en moins de 15 minutes. Indique comment les conserver pour garder leur moelleux toute la semaine."</p>
+                </div>
+            </section>
+
+        </div>
+
+        <footer class="mt-16 text-center border-t border-slate-200 pt-10">
+            <p class="text-slate-500 text-xs">Page protégée &bull; Usage personnel réservé au client</p>
+        </footer>
+    </main>
+
+    <script>
+        function copyPrompt(id, btn) {
+            const text = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                btn.classList.add('copied');
+                setTimeout(() => { btn.classList.remove('copied'); }, 2000);
+            });
+        }
+    </script>
+    <script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js');
+    }
+    </script>
+</body>
+</html>
