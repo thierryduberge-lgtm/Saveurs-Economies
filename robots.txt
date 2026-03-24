@@ -1,0 +1,6 @@
+
+User-agent: *
+Allow: /
+
+# Indique à Google où est ton sitemap
+Sitemap: https://thierryduberge-lgtm.github.io/saveurs-economies/sitemap.xml
